@@ -4,7 +4,7 @@ class CreateReactions < ActiveRecord::Migration[7.1]
       t.references :publication, null: false, foreign_key: true
       t.string :kind
       t.string :reaction_type
-      t.references :comment, null: false, foreign_key: true
+      t.references :comment, foreign_key: true
 
       t.timestamps
     end
